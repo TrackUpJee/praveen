@@ -3,7 +3,7 @@
   "short_name": "JEE HUB",
   "start_url": "./index.html",
   "scope": "./",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#06060f",
   "theme_color": "#0a0a18",
   "orientation": "portrait",
