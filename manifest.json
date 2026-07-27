@@ -14,3 +14,10 @@
     { "src": "logo.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
+"widgets": [
+  {
+    "name": "JEE Hub Widget",
+    "short_name": "JEE Hub",
+    "ms_ac_template": "widget-template.json"
+  }
+]
