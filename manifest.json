@@ -2,10 +2,10 @@
   "background_color": "#ffffff",
   "dir": "ltr",
   "display": "standalone",
-  "name": "JEE2027 Hub",
+  "name": "JEE 2027 Hub",
   "orientation": "portrait",
   "scope": "/",
-  "short_name": "JEE2027 Hub",
+  "short_name": "JEE Hub",
   "start_url": "/",
   "theme_color": "#0a0a18",
   "icons": [
