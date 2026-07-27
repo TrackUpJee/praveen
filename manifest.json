@@ -14,3 +14,57 @@
     { "src": "logo.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
+"description": "JEE Hub - Your ultimate preparation partner for JEE exams with test series and notes.",
+"id": "/JEE...",
+"categories": ["education", "books"],
+"prefer_related_applications": false,
+"screenshots": [
+  {
+    "src": "screenshot-phone.png",
+    "sizes": "1080x1920",
+    "type": "image/png",
+    "form_factor": "narrow",
+    "label": "JEE Hub Mobile View"
+  },
+  {
+    "src": "screenshot-desktop.png",
+    "sizes": "1920x1080",
+    "type": "image/png",
+    "form_factor": "wide",
+    "label": "JEE Hub Desktop View"
+  }
+]
+"serviceworker": {
+  "src": "/sw.js",
+  "scope": "/",
+  "type": "classic",
+  "update_via_cache": "none"
+}
+"shortcuts": [
+  {
+    "name": "Open Test Series",
+    "short_name": "Tests",
+    "url": "/tests",
+    "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+  }
+],
+"widgets": [
+  {
+    "name": "JEE Hub Daily Quiz",
+    "short_name": "Quiz Widget",
+    "description": "Check daily JEE questions directly from your home screen.",
+    "ms_ac_template": "widget-template.json",
+    "data": "widget-data.json",
+    "type": "application/json"
+  }
+]
+"file_handlers": [
+  {
+    "action": "/open-file",
+    "accept": {
+      "application/pdf": [".pdf"],
+      "image/*": [".jpg", ".png"]
+    }
+  }
+],
+"display_override": ["window-controls-overlay", "minimal-ui"]
