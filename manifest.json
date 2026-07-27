@@ -1,38 +1,33 @@
 {
-  "name": "JEE Hub",
-  "short_name": "JEE Hub",
-  "description": "JEE Hub - Your ultimate preparation partner for JEE exams with test series and notes.",
+  "name": "JEE2027 Hub — All-in-One Prep OS",
+  "short_name": "JEE HUB",
+  "description": "JEE2027 Hub - Your ultimate preparation partner for JEE exams with test series and notes.",
   "id": "/JEE",
-  "start_url": "/JEE/",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#06060f",
+  "theme_color": "#0a0a18",
   "categories": ["education", "books"],
   "prefer_related_applications": false,
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "logo.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "logo.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "screenshots": [
     {
-      "src": "screenshot-phone.png",
-      "sizes": "1080x1920",
+      "src": "logo.png",
+      "sizes": "192x192",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "JEE Hub Mobile View"
     },
     {
-      "src": "screenshot-desktop.png",
-      "sizes": "1920x1080",
+      "src": "logo.png",
+      "sizes": "192x192",
       "type": "image/png",
       "form_factor": "wide",
       "label": "JEE Hub Desktop View"
@@ -42,8 +37,8 @@
     {
       "name": "Open Test Series",
       "short_name": "Tests",
-      "url": "/JEE/tests",
-      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+      "url": "./index.html",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
     }
   ],
   "widgets": [
@@ -58,7 +53,7 @@
   ],
   "file_handlers": [
     {
-      "action": "/JEE/open-file",
+      "action": "./index.html",
       "accept": {
         "application/pdf": [".pdf"],
         "image/*": [".jpg", ".png"]
@@ -67,5 +62,3 @@
   ],
   "display_override": ["window-controls-overlay", "minimal-ui"]
 }
-
-
