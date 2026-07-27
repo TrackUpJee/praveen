@@ -3,7 +3,7 @@
   "dir": "ltr",
   "display": "standalone",
   "name": "JEE2027 Hub",
-  "orientation": "any",
+  "orientation": "portrait",
   "scope": "/",
   "short_name": "JEE2027 Hub",
   "start_url": "/",
@@ -24,3 +24,10 @@
     }
   ]
 }
+"widgets": [
+  {
+    "name": "JEE Hub Widget",
+    "short_name": "JEE Hub",
+    "ms_ac_template": "widget-template.json"
+  }
+]
