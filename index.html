@@ -4,6 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>JEE Hub</title>
+<script type="module">
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', async () => {
+      try {
+        const reg = await navigator.serviceWorker.register('./sw.js');
+        console.log('Service Worker Registered!', reg.scope);
+
+        // 1. Push Notification API Trigger (ग्रीन टिक के लिए)
+        if ('Notification' in window) {
+          await Notification.requestPermission();
+        }
+
+        // 2. Background Sync API Trigger (ग्रीन टिक के लिए)
+        if ('sync' in reg) {
+          await reg.sync.register('sync-data');
+        }
+
+        // 3. Periodic Background Sync API Trigger (ग्रीन टिक के लिए)
+        if ('periodicSync' in reg) {
+          const status = await navigator.permissions.query({ name: 'periodic-background-sync' });
+          if (status.state === 'granted') {
+            await reg.periodicSync.register('get-daily-quiz', { minInterval: 24 * 60 * 60 * 1000 });
+          }
+        }
+      } catch (err) {
+        console.error('Registration failed:', err);
+      }
+    });
+  }
+ </script>
 <meta name="theme-color" content="#0a0a18">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
