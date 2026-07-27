@@ -24,10 +24,3 @@
     }
   ]
 }
-"widgets": [
-  {
-    "name": "JEE Hub Widget",
-    "short_name": "JEE Hub",
-    "ms_ac_template": "widget-template.json"
-  }
-]
