@@ -3,6 +3,8 @@
       "target": {
         "namespace": "android_app",
         "package_name": "io.github.praveenchahar.twa",
-        "sha256_cert_fingerprints": ["6E:72:32:87:01:3A:0E:51:28:EC:A7:F9:5A:A0:25:BA:9D:BA:E0:C4:DE:2F:B8:9A:DF:FD:65:15:15:05:D6:81"]
+        "sha256_cert_fingerprints": ["6D:72:7C:DA:2C:B6:D2:4C:80:DF:D1:8E:D1:BD:BA:09:73:78:28:A0:32:E5:56:CA:02:15:D3:DD:32:58:6D:C6"]
       }
     }]
+
+
