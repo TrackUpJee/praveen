@@ -17,6 +17,23 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// App se message aane par local notification dikhane ka code
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SHOW_NOTIFICATION") {
+    const title = event.data.title || "TrackUp Alert";
+    const options = {
+      body: event.data.body || "",
+      icon: "logo.png",
+      badge: "logo.png",
+      vibrate: [200, 100, 200],
+      tag: "trackup-alert",
+      renotify: true
+    };
+
+    self.registration.showNotification(title, options);
+  }
+});
+
 self.addEventListener("notificationclick", (e) => {
   e.notification.close();
   e.waitUntil(
@@ -26,3 +43,5 @@ self.addEventListener("notificationclick", (e) => {
     })
   );
 });
+
+
