@@ -25,6 +25,35 @@
 // exists (e.g. this file dropped in somewhere on its own, single-file style).
 // If logo.png loads fine, none of this code touches the links at all.
 (function(){
+    // --- TrackUp Notification Code Start ---
+  window.requestTrackUpPermission = function() {
+    if ("Notification" in window) {
+      Notification.requestPermission().then((permission) => {
+        if (permission === "granted") {
+          console.log("Notification Permission Granted!");
+        }
+      });
+    }
+  };
+
+  window.triggerLocalNotification = function(title, body) {
+    if ("Notification" in window && Notification.permission === "granted") {
+      if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({
+          type: "SHOW_NOTIFICATION",
+          title: title,
+          body: body
+        });
+      } else {
+        new Notification(title, { body: body, icon: "logo.png" });
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    window.requestTrackUpPermission();
+  });
+  // --- TrackUp Notification Code End ---
   function makeIcon(size){
     const c=document.createElement('canvas');c.width=size;c.height=size;
     const ctx=c.getContext('2d');
