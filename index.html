@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "52fa3448-c4ab-41e3-94f0-7de735b7b4a7",
-      safari_web_id: "web.onesignal.auto.4bf12d4e-2e1c-4e2f-be7e-e4e315c9ca64",
-      notifyButton: {
-        enable: true,
-      },
-    });
-  });
 </script>    
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -62,7 +50,7 @@
       }
     }
   };
-
+  
   document.addEventListener("DOMContentLoaded", () => {
     window.requestTrackUpPermission();
   });
